@@ -1,3 +1,17 @@
+## Version 8.7.1 – Released: August 6th, 2026
+
+[New Feature]
+* Added support for FedEx's new Extra Small Box packaging option, including eligibility for FedEx One Rate flat-rate pricing.
+
+[Bug Fix]
+* Fixed PHP warnings and broken page redirects that occurred when Hold at Location was enabled without completing FedEx account registration.
+* Fixed a layout issue in the FedEx Shipment Tracking box on the Order Edit page caused by a recent WooCommerce update.
+* Fixed international shipments from Puerto Rico or US Virgin Islands origin stores being rejected by FedEx for missing export compliance information.
+
+[Compatibility]
+* Confirmed compatibility with PHP 8.4.
+* Confirmed compatibility with WooCommerce 11.0.
+
 ## Version 8.7.0 – Released: July 23rd, 2026
 
 [New Feature]
@@ -35,7 +49,7 @@
 * Added Dangerous Goods Additional Handling option – available as a global setting and as a per-order override on the Edit Order page for orders containing hazmat products.
 * Added support for Dangerous Goods Shipper's Declaration document.
 
-[Improvements]
+[Improvement]
 * Broker Select Option settings for Customs Duties separated into dedicated fields for easier configuration.
 * Enforced 0.1 as the minimum package weight across all packing methods.
 
@@ -64,7 +78,7 @@
 [Bug Fix]
 * Network Super Admins on WordPress Multisite can now perform all shipment related actions on WooCommerce subsites without any issues.
 
-[Improvements]
+[Improvement]
 * Express pickup date now automatically advances to the next working day when the scheduled ready time has already passed, preventing pickup request failures.
 * Registration details are now stored independently, ensuring they are always preserved even when a stale settings page is saved after registration is completed in another tab.
 
@@ -100,7 +114,7 @@
 
 ## Version 8.2.4 – Released: Apr 15th, 2026
 
-[Improvements]
+[Improvement]
 * Set the company name character limit to 35 characters to avoid label failure
 * Replaced transient-based storage with wp_options for auth token and internal endpoints. Caching plugins like Object Cache Pro, Redis and others were serving stale data, causing intermittent Unauthorized errors. This ensures consistent data across all caching setups
 * Compatibility for FedEx REST with WooCommerce Multi Warehouse Shipping with FedEx in v1.3.8
@@ -110,7 +124,7 @@
 
 ## Version 8.2.3 – Released: Mar 27th, 2026
 
-[Improvements]
+[Improvement]
 * Compatibility for PHP v7.4 on handling transient data by replacing usage of the match() function with the switch() function
 
 ## Version 8.2.2- Released: Mar 26th, 2026
@@ -119,7 +133,7 @@
 * Added a setting to allow merchants to display guaranteed or non-guaranteed FedEx Freight services at checkout.
 * Added support for FedEx Freight Bill-to-Account, allowing freight charges to be billed to a specified FedEx account.
 
-[Improvements]
+[Improvement]
 * UK to UK shipments are now processed with customs details to support shipping labels.
 * The plugin now gives an option to switch from or to FedEx Comprehensive Rates based on the "Best Shipping Rates" setting.
 * Enhanced bearer token retrieval and management to ensure stable and efficient API authentication with FedEx, particularly for environments with object caching enabled.
@@ -130,7 +144,7 @@
 
 ## Version 8.2.1- Released: Mar 5th, 2026
 
-[Improvements]
+[Improvement]
 * Removed passing of residential value under recipient details when Freight Direct is enabled
 * Implemented transient-based caching for the license pages
 
@@ -139,7 +153,7 @@
 
 ## Version 8.2.0- Released: Feb 20th, 2026
 
-[Improvements]
+[Improvement]
 * FedEx Address Validation is now used for shipping cost calculations & label printing.
 * The plugin now enables shipping rates and defaults it to the FedEx Account Rates on fresh installation.
 
@@ -148,12 +162,12 @@
 
 ## Version 8.1.9- Released: Feb 2nd, 2026
 
-[Improvements]
+[Improvement]
 * Support for Fedex Freight Priority and Fedex Freight Economy services with Freight Direct.
 
 ## Version 8.1.8- Released: Jan 21st, 2026
 
-[Improvements]
+[Improvement]
 * Added account number field for the international ground pickup request via REST API.
 * Removed encoding of document upload via REST API.
 
@@ -162,7 +176,7 @@
 
 ## Version 8.1.7- Released: Jan 17th, 2026
 
-[Improvements]
+[Improvement]
 * Included Freight Direct data for freight rate fetching.
 * Privilege restriction notice is now shown only within wp-admin pages.
 
@@ -181,7 +195,7 @@
 
 ## Version 8.1.4- Released: Nov 21st, 2025
 
-[Improvements]
+[Improvement]
 * Support for printing additional documents like USMCA, Pro Forma Invoice, NAFTA, etc. for ETD shipments.
 * Temporarily suspended Accessibility Type option for hazmat products with FedEx Express Freight
 * Introduced region-based services list within the plugin settings for different shipping zones
@@ -210,12 +224,12 @@
 [New Feature]
 * Added FedEx Shipping Rates under WooCommerce Shipping Zones.
 
-[Improvements]
+[Improvement]
 * Enhanced WordPress Security Configuration Compliance.
 
 ## Version 8.0.2 – Released: Aug 13th, 2025
 
-[Improvements]
+[Improvement]
 * Added support for uploading documents to orders saved in both HPOS and WP Post tables via REST API
 * Compatibility with PH Delivery Date Picker for FedEx Add-on
 
@@ -226,7 +240,7 @@
 
 ## Version 8.0.0 – Released: July 29th, 2025
 
-[New Features]
+[New Feature]
 * Introduced RESTful API integration (Beta release).
 * Enabled switching between SOAP and REST connections via the revamped registration page.
 * Added new REST-specific setting: Customer Reference Type.
@@ -234,7 +248,7 @@
 * Added new REST-specific setting: Block Insight Visibility.
 * Enabled document uploads (pre- and post-shipment) for international orders using REST connection.
 
-[Improvements]
+[Improvement]
 * Compatibility with WooCommerce v10.0.4.
 * Compatibility with WordPress v6.8.2.
 * Compatibility with FOX – Currency Switcher Professional for WooCommerce v1.4.3.1.
@@ -252,14 +266,14 @@
 
 ## Version 7.1.8 – Released: May 14th, 2025
 
-[Improvements]
+[Improvement]
 * Compatibility with WooCommerce v.9.8.5.
 * Compatibility with WordPress v.6.8.1.
 * Improved the process for Plugin License Activation.
 
 ## Version 7.1.7 – Released: April 14th, 2025
 
-[Improvements]
+[Improvement]
 * Packages will revert to Your Packaging from FedEx Standard Boxes while generating labels for FedEx Ground shipments.
 * Restricted sending Commodity Details for only FedEx international shipments.
 * Live FedEx rates disabled while handling pre-packed products with missing weight and dimensions.
@@ -284,7 +298,7 @@
 * FedEx Priority Express and FedEx Priority services for Chile.
 * New Hold at Location type: FedEx Authorised Ship Center.
 
-[Improvements]
+[Improvement]
 * Label Printing for shipments from the US to Ireland.
 * Standardised minimum shipment weight for shipping as 0.01 lbs AND 0.01 kgs.
 * Deprecated COD option for shipments within and to US.
@@ -299,7 +313,7 @@
 [New Feature]
 * Added Cleanup FedEx Shipment Details functionality.
 
-[Improvements]
+[Improvement]
 * Added hook to get estimate delivery date 'ph_fedex_get_estimate_delivery_for_order'.
 * Compatibility with the Kadence WooCommerce Email Designer Plugin.
 
@@ -308,7 +322,7 @@
 [New Feature]
 * Added support for FedEx Ground rate and FedEx Express One Rate together at cart, checkout and edit order page
 
-[Improvements]
+[Improvement]
 * Added Order Number and Order ID tag in the email subject.
 * Added Purpose of Shipment for US-based shipments.
 * Added custom scaling option for displaying labels in the browser with PNG format.
@@ -321,7 +335,7 @@
 
 ## Version 7.1.1 – Released: Sep 16th, 2024
 
-[Improvements]
+[Improvement]
 * Added a configurable cache expiration limit for shipping rates to improve performance with cached rates
 
 [Bug Fix]
@@ -330,7 +344,7 @@
 
 ## Version 7.1.0 – Released: Aug 22nd, 2024
 
-[Improvements]
+[Improvement]
 * Support for Liability Coverage Type options for FedEx Freight shipments
 * Support for customizing events to send Tracking Email Notifications by FedEx
 
@@ -341,7 +355,7 @@
 * "Non-Stackable" option supported for FedEx Freight
 * Estimated delivery date feature for WooCommerce Blocks cart and checkout page
 
-[Improvements]
+[Improvement]
 * Improved the migration process for HPOS
 * Removed unsupported data masking on shipping labels
 * License expiration notification added
@@ -356,12 +370,12 @@
 [New Feature]
 * Added FedEx Freight Direct option
 
-[Improvements]
+[Improvement]
 * Updated Currency Units for South Korean Won and New Taiwan Dollar
 
 ## Version 7.0.6- Released: April 24th, 2024
 
-[New Features]
+[New Feature]
 * Added Compatible with Jersey: Ship to Jersey hassle-free with our latest plugin update
 
 ## Version 7.0.5- Released: April 12th, 2024
@@ -386,7 +400,7 @@
 
 ## Version 7.0.2- Released: Feb 8th, 2024
 
-[Improvements]
+[Improvement]
 * Box Packing Compatibility with Freight Shipments.
 * Setting Carrier to "None" in FedEx Tracking Window now saves tracking numbers.
 
@@ -402,7 +416,7 @@
 
 ## Version 6.1.0- Released: Jan 3rd, 2024
 
-[Improvements]
+[Improvement]
 * Compatibility with PHP 8.2.
 * Added "Encode Uploaded Document" option for commercial invoice signature and company logo.
 
@@ -411,12 +425,12 @@
 
 ## Version 6.0.9 – Released: Dec 15th, 2023
 
-[Improvements]
+[Improvement]
 * Compatibility with WooCommerce 8.4.0
 
 ## Version 6.0.8 – Released: Dec 4th, 2023
 
-[Improvements]
+[Improvement]
 * Support for FedEx® Priority and FedEx® Priority Express for European and AMEA regions.
 * Support for FedEx® Regional Economy and FedEx® Regional Economy Freight for AMEA region.
 
@@ -491,7 +505,7 @@
 
 ## Version 5.2.3 – Released: March 30th, 2023
 
-[Improvements]
+[Improvement]
 * Display HAL at checkout based on "Method Available" Countries
 
 [Bug Fix]
@@ -535,7 +549,7 @@
 [New Feature]
 * Support for auto-printing ZPL shipping labels via Email
 
-[Improvements]
+[Improvement]
 * Third-party shipping for multiple warehouses
 * Support for Unassembled Composite Products
 
@@ -554,7 +568,7 @@
 
 ## Version 5.1.3 – Released: Oct 21st, 2022
 
-[New Features]
+[New Feature]
 * Added Option to skip Product from Rate and Label.
 * Added Small Quantity Exception DG Type in Edit Product page under FedEx Shipping Details
 * Changed Special Service select option to Alcohol Check box in Edit Product under FedEx Shipping Details
@@ -617,17 +631,17 @@
 
 ## Version 5.0.4 – Released: Apr 13th, 2022
 
-[Improvements]
+[Improvement]
 * Added 'INTERNATIONAL_PRIORITY' service for shipments with Puerto Rico as Origin Country.
 
 ## Version 5.0.3 – Released: Apr 8th, 2022
 
-[New feature]
+[New Feature]
 * Added 'INTERNATIONAL_PRIORITY' service for shipments with Puerto Rico as Destination Country.
 
 ## Version 5.0.2 – Released: March 25th, 2022
 
-[Improvements]
+[Improvement]
 * Pickup will be requested for the next working day once the current time crosses the Pickup Start time.
 
 ## Version 5.0.1 – Released: March 18th, 2022
@@ -637,7 +651,7 @@
 
 ## Version 5.0.0 – Released: March 9th, 2022
 
-[Improvements]
+[Improvement]
 * Deprecated FedEx "INTERNATIONAL_PRIORITY" service
 
 [Bug Fix]
@@ -646,13 +660,13 @@
 
 ## Version 4.9.9 – Released: March 2nd, 2022
 
-[Improvements]
+[Improvement]
 * Added support for shipments containing Batteries
 * Updates Dangerous Goods options – Limited Quantity Commodities, Hazardous Materials, Battery, ORM-D
 
 ## Version 4.9.8 – Released: February 14th, 2022
 
-[Improvements]
+[Improvement]
 * Introduced PDF option to Bulk Print Shipping Labels
 
 [Bug Fix]
@@ -660,14 +674,14 @@
 
 ## Version 4.9.7 – Released: January 7th, 2022
 
-[Improvements]
+[Improvement]
 * Introduced Packaging algorithm "Based on Volume Used * Item Count"
 * Introduced Special service – "Third Party Consignee"
 * Option to hide shipper information from shipping label
 
 ## Version 4.9.6 – Released: Dec 31st, 2021
 
-[Improvements]
+[Improvement]
 * Added new services "FedEx International Priority® Express" and "FedEx International Priority®" for EU & AMEA countries
 * Added new address fields for Alternate Return Address
 * Added support for Special service – 'Alcohol' in Rate Request
@@ -722,17 +736,17 @@
 * Option to hide shipping data on the label
 * Compatibility with Print Invoice and Delivery Notes plugin
 
-[Fixed]
+[Bug Fix]
 * Issue related to SmartPost hub
 
 ## Version 4.8.8 – Released: Aug 9th, 2021
 
-[Improvements]
+[Improvement]
 * Compatibility with PHP v.8
 
 ## Version 4.8.7 – Released: July 28th, 2021
 
-[Improvements]
+[Improvement]
 * Added Third-Party Option for Custom Duties Payer
 * Option to include "Document Content" Type for International Shipments
 * Option to add 'Comments' for Commercial Invoice
@@ -740,7 +754,7 @@
 
 ## Version 4.8.6 – Released: July 21st, 2021
 
-[Improvements]
+[Improvement]
 * Hidden 'FedEx Hold at Location' option at checkout for Virtual products
 * Added FedEx Tracking under Actions Column in WooCommerce Orders Page
 * Option to edit number of packages for cost calculation in Order edit Page
@@ -762,7 +776,7 @@
 
 ## Version 4.8.3 – Released: June 11th, 2021
 
-[New Features]
+[New Feature]
 * Compatibility with WooCommerce Composite Products
 
 [Improvement]
@@ -773,7 +787,7 @@
 
 ## Version 4.8.2 – Released: June 1st, 2021
 
-[New Features]
+[New Feature]
 * Implemented Option to generate Pro Forma Invoice
 * Saturday Delivery support for Automatic Label and Bulk Label Generation
 
@@ -812,23 +826,23 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.7.8 – Released: April 16th, 2021
 
-[Improvements]
+[Improvement]
 * Option to display labels in browser for individual orders (Applicable only for PNG Labels)
 * Introduced ETD option on Edit Order Page
 
 ## Version 4.7.7 – Released: April 14th, 2021
 
-[Improvements]
+[Improvement]
 * Now select whether you want to display the discounted price, original product price, or the declared value to be printed on the commercial invoice
 
 ## Version 4.7.6 – Released: April 06th, 2021
 
-[Improvements]
+[Improvement]
 * FedEx Freight shipping rate calculation for different freight classes
 
 ## Version 4.7.5 – Released: March 15th, 2021
 
-[Improvements]
+[Improvement]
 * Clear shipping label data from WooCommerce orders after voiding shipment
 * Improved shipping for orders containing multiple packages
 * FedEx Standard Box support for Brazil
@@ -838,7 +852,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.7.4 – Released: March 05th, 2021
 
-[Improvements]
+[Improvement]
 * FedEx Ground shipping service for Canada to US shipments
 * FedEx 25 Kg and 10 Kg box for international FedEx shipments
 
@@ -847,28 +861,28 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.7.3 – Released: February 26th, 2021
 
-[Improvements]
+[Improvement]
 * Packing for prepacked & normal packages together while using Weight based Parcel Packing method
 
 ## Version 4.7.2 – Released: February 15th, 2021
 
-[Improvements]
+[Improvement]
 * HS Tariff Code supported for product variations while calculating shipping rates
 
 ## Version 4.7.1 – Released: December 22nd, 2020
 
-[Improvements]
+[Improvement]
 * Calculate shipping rates based on weight-based packaging
 * Enable or disable all the FedEx shipping services with one click
 
 ## Version 4.7.0 – Released: December 10th, 2020
 
-[New Features]
+[New Feature]
 * Added support for CSB-V Shipments for India
 
 ## Version 4.6.9 – Released: November 28th, 2020
 
-[Improvements]
+[Improvement]
 * Option to specify payment terms for FedEx commercial invoice
 * Generate package & shipping labels for products without weight & dimensions for domestic orders
 * FedEx rates can be calculated for a manually generated package from the WooCommerce orders page
@@ -876,7 +890,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.6.8 – Released: November 13th, 2020
 
-[Improvements]
+[Improvement]
 * Added option for Working days(Applicable for rates, labels, and pickups)
 * Added option for Special Instructions
 * Discontinued Saturday Pickup option(will be handled using "Working days" option)
@@ -886,7 +900,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.6.7 – Released: October 26th, 2020
 
-[Improvements]
+[Improvement]
 * Special characters are now supported in Name, City, and Address Fields
 
 [Bug Fix]
@@ -894,24 +908,24 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.6.6 – Released: October 10th, 2020
 
-[Improvements]
+[Improvement]
 * Display of Shipping phone number in FedEx labels
 
 ## Version 4.6.5 – Released: September 16th, 2020
 
-[Improvements]
+[Improvement]
 * Freight shipping rate calculations
 * Shipping labels can now be printed in bulk with a custom scaling option
 
 ## Version 4.6.4 – Released: September 04th, 2020
 
-[Improvements]
+[Improvement]
 * Improved WooCommerce [4.4.1] Compatibility
 * Improved compatibility with WooCommerce Checkout Addons plugin
 
 ## Version 4.6.3 – Released: August 07th, 2020
 
-[Improvements]
+[Improvement]
 * Improved compatibility issue with Flexible Shipping Pro plugin
 
 ## Version 4.6.2 – Released: July 22nd, 2020
@@ -921,7 +935,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.6.1 – Released: July 17th, 2020
 
-[Improvements]
+[Improvement]
 * Updated Shipping Rates WSDL Version
 * Added all Freight Line Item Freight Class to the shipping rates request
 * Added Special Service OVER LENGTH when Freight Product Dimension crosses 96 inches
@@ -935,17 +949,17 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.5.9 – Released: July 05th, 2020
 
-[New Features]
+[New Feature]
 * Added option to set HS Tariff Code for all the products at a global level
 
-[Improvements]
+[Improvement]
 * Added option to get Saturday Delivery shipping rates
 * Added option to enable Doc Tab Content for shipping label in ZPLII format
 * Added option to specify Cut-off Time for displaying shipping rates at cart and checkout page
 
 ## Version 4.5.8 – Released: June 19th, 2020
 
-[Improvements]
+[Improvement]
 * Added Product Freight Class in rate and shipment requests in all packing algorithms
 * Improved compatibility with WooCommerce Ship to Multiple Addresses plugin
 
@@ -954,7 +968,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.5.7 – Released: June 05th, 2020
 
-[Improvements]
+[Improvement]
 * Improved compatibility with PluginHive's WooCommerce Shipment Tracking Pro
 * Added option to disable tracking details to customer in My Account Order View and Order Completion Email
 
@@ -970,10 +984,10 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.5.5 – Released: April 09th, 2020
 
-[New Features]
+[New Feature]
 * Added option to include ETD (Electronic Trade Documents) in Shipping Labels for International Shipments
 
-[Improvements]
+[Improvement]
 * Added Sender as the default Duties and Taxes Payer
 
 [Bug Fix]
@@ -981,19 +995,19 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.5.4 – Released: March 24th, 2020
 
-[Improvements]
+[Improvement]
 * Option to edit & update Hold At Location for each order
 * Option to send Additional Labels (commercial invoice, cod labels, etc.) via email
 * Improved compatibility with FOX Multi-Currency plugin (formerly knows as WOOCS Multi-Currency plugin) for AED, JYE, JED, KUD, DHS, SID, NMP, SFR, UKL, and ARN
 
 ## Version 4.5.3 – Released: February 28th, 2020
 
-[Improvements]
+[Improvement]
 * Improved Spanish Language Translation
 
 ## Version 4.5.2 – Released: February 14th, 2020
 
-[Improvements]
+[Improvement]
 * Added Help & Support Section for Improved User Experience
 * Set Billing Address to the Alternate Return Address for the Undelivered Shipments
 * Added Order Number as Invoice number for Commercial Invoice
@@ -1001,7 +1015,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.5.1 – Released: January 18th, 2020
 
-[Improvements]
+[Improvement]
 * Added support for FedEx Tube and A4 Boxes
 
 [Bug Fix]
@@ -1010,24 +1024,24 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.5.0 – Released: December 26th, 2019
 
-[Improvements]
+[Improvement]
 * Added option for editing FedEx default boxes.
 
 ## Version 4.4.9 – Released: December 05th, 2019
 
-[New Features]
+[New Feature]
 * Set Fallback Rates for cases when FedEx does not return shipping rates
 * Insurance/Declared Value will be rounded off
 
-[Improvements]
+[Improvement]
 * Support for Order Currency in Commercial Invoice using FOX Multi-Currency plugin (formerly knows as WOOCS Multi-Currency plugin)
 
 ## Version 4.4.8 – Released: November 13th, 2019
 
-[New Features]
+[New Feature]
 * Add Alternative Return Address for Undelivered Shipments
 
-[Improvements]
+[Improvement]
 * Support for OP 900 Label for Hazardous Shipments
 * Improved plugin update functionality
 
@@ -1038,7 +1052,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.4.6 – Released: October 21st, 2019
 
-[Improvements]
+[Improvement]
 * Print FedEx Freight Shipping Label along with Bill of Lading document
 * Option to select Freight Document Type as VICS Bill of Lading or FedEx Freight Straight Bill of Lading
 * Generate Shipping Labels in three more sizes – PAPER_4x6.75, STOCK_4x6.75, and STOCK_4x9
@@ -1184,7 +1198,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 [Improvement]
 * COD for Personal and Company check.
 
-[Bug fix]
+[Bug Fix]
 * Case related to Bulk Printing of labels
 * Case related to Saturday delivery
 
@@ -1208,12 +1222,12 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 * Implemented B13 for Shipments from Canada.
 * Implemented Option to remove special characters from FedEx request.
 
-[Improvements]
+[Improvement]
 * Hold at location updated if the customer selects the shipping address instead of the billing address.
 
 ## Version 4.2.2 – Released: May 18th, 2019
 
-[Improvements]
+[Improvement]
 * Improved Pre Packed algorithm for weight-based: Purely divided by weight.
 
 [Bug Fix]
@@ -1221,7 +1235,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.2.1 – Released: Apr 26th, 2019
 
-[Improvements]
+[Improvement]
 * Added FedEx Standard Box Support for Canada
 * UI Changes
 
@@ -1230,7 +1244,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.2.0 – Released: Apr 09th, 2019
 
-[New Features]
+[New Feature]
 * Extensive Support for FedEx Hazmat Products
 
 [Bug Fix]
@@ -1241,30 +1255,30 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 
 ## Version 4.1.9 – Released: Mar 25th, 2019
 
-[Fix]
+[Bug Fix]
 * 10kg & 25kg FedEx Box getting selected for Domestic (US) shipments
 * Fixed Liftgate/Inside Delivery not working
 * Fixed FedEx One Rates displaying for ineligible shipments
 
 ## Version 4.1.8 – Released: Mar 6th, 2019
 
-[New Features]
+[New Feature]
 * Option to enable Saturday Pickup
 * Added Maximum Shipping Cost
 
-[Improvements]
+[Improvement]
 * Box Packing UI changes
 * Fixed Weight and Dimension Standard Units while adding a Custom Box
 * Address validation for specific countries
 * Compatibility with WooCommerce Currency Switcher plugin
 
-[Fix]
+[Bug Fix]
 * Fixed Custom Value at Shipment Level conflict with Custom Value at the Commodity level
 * Fixed Network Site Activation for FedEx plugin
 
 ## Version 4.1.7 – Released: Jan 4th, 2019
 
-[New Features]
+[New Feature]
 * Added Debug XML Request and Response for FedEx Pickup
 * Option to communicate with FedEx in a Currency different than the Store Currency
 * FedEx Hold at Location is now supported
@@ -1272,7 +1286,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 * Option to set Dry Ice Weight in the Product page
 * Option to Print Label & Custom Invoice From Order List Page
 
-[Improvements]
+[Improvement]
 * Various UI changes
 * Improved Bundled Product Compatibility
 * Debug Message related improvements
@@ -1282,7 +1296,7 @@ WSDL: Rates 31, Shipping 28, Pickup 23, Location 12, Address Validation 4, Uploa
 * Display Estimated Delivery Date on Order Page
 * Introduced Email Content Modification
 
-[Fix]
+[Bug Fix]
 * Handling Refunded Item
 * License related message is now shown as notice, not error
 * Estimated delivery date now works properly for FedEx Ground and Smart Post with adjustment
@@ -1292,7 +1306,7 @@ License migration changes.
 
 ## Version 4.1.5 – Released: September 7th, 2018
 
-[Improvements]
+[Improvement]
 * Introduced display of COD tracking number on the individual order page.
 * Renamed the following services: FedEx Economy Freight to FedEx International Economy Freight, and FedEx Priority Freight to FedEx International Priority Freight
 
@@ -1305,7 +1319,7 @@ License migration changes.
 * COD option is automatically selected for label generation if the payment method is chosen as 'COD'.
 * Insurance will not display on the orders page when not enabled on the settings page.
 
-[Fix]
+[Bug Fix]
 * Case related to notice in the console during manual package creation fixed.
 
 ## Version 4.1.3 – Released: August 9th, 2018
@@ -1316,7 +1330,7 @@ License migration changes.
 * Provided option to adjust shipment day for rate request, it will affect estimated delivery.
 * Provided option to get the reason for return label on the customer Myaccount page before generating the return label, reason will reflect in the order note.
 
-[Improvements]
+[Improvement]
 * Handled weekend case in case of Estimated delivery for FedEx Ground.
 * Debug has been refined.
 * Handled the Conflict with DHL.
@@ -1326,7 +1340,7 @@ License migration changes.
 [New Feature]
 * Option to hide FedEx meta box on the order page.
 
-[Improvements]
+[Improvement]
 * Added Vendor option in case of multi-vendor scenario to send the label to the vendor, if multi vendor addon active.
 
 ## Version 4.1.1 – Released: June 15, 2018
@@ -1364,7 +1378,7 @@ License migration changes.
 
 ## Version 4.0.4 – Released: March 01, 2018
 
-[Improvements]
+[Improvement]
 * Automatic label generation restricted to order status processing only.
 * Shipping date format changed to the official WordPress date format.
 * Enhanced debugging for the Pickup request.
@@ -1380,7 +1394,7 @@ License migration changes.
 
 ## Version 4.0.3 – Released: January 24, 2018
 
-[Improvements]
+[Improvement]
 * Option to give insurance amount at the product level
 * Option to select accessibility and regulations at product variation level for dangerous products
 * Send email address in shipper contact request (compatibility with multivendor plugins)
@@ -1389,21 +1403,21 @@ License migration changes.
 [New Feature]
 * Option to select alcohol for shipping at product variation level
 
-[Bug fix]
+[Bug Fix]
 * Made to work with currency Kuwaiti dinar
 * Corrected issue of License key tab conflicting with other XA plugins settings
 
 ## Version 4.0.2 – Released: December 29, 2017
 
-[Improvements]
+[Improvement]
 * Support for external products and bundled products and it requires WooCommerce bundled product plugin 5.6.1
 
-[Bugfix]
+[Bug Fix]
 * Resolved problem with dimensions not reflecting in debugging.
 
 ## Version 4.0.1 – Released: December 22, 2017
 
-[Improvements]
+[Improvement]
 * Changed the slug when navigating to the FedEx settings from the video page.
 * Modified the image URL(to an absolute path from URL) for commercial invoice company logo and signature.
 
@@ -1412,43 +1426,43 @@ License migration changes.
 [New Feature]
 * New UI.
 
-[Bugfix]
+[Bug Fix]
 * Filter introduced to alter the product price.
 * Case related to Estimated delivery showing the invalid date.
 
 ## Version 3.3.13 – Released: December 22, 2017
 
-[Bugfix]
+[Bug Fix]
 * Fixed notice.
 
 ## Version 3.3.12 – Released: December 08, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to Customs value missing.
 
 ## Version 3.3.10 – Released: December 04, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected Conflict with WooCommerce Shipment Tracking Basic Version.
 
 ## Version 3.3.9 – Released: November 30, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to Country-State not getting saved in some cases.
 
 ## Version 3.3.8 – Released: November 29, 2017
 
-[Bugfix]
+[Bug Fix]
 * PHP warning on a fresh install.
 
 ## Version 3.3.7 – Released: November 29, 2017
 
-[Bugfix]
+[Bug Fix]
 * PHP warning on a fresh install.
 
 ## Version 3.3.6 – Released: November 28, 2017
 
-[Bugfix]
+[Bug Fix]
 * Compatibility with WC older version.
 * Case related to Exclude tax in the product price.
 
@@ -1463,12 +1477,12 @@ License migration changes.
 [Improvement]
 * Restricted Enqueue media for admin.
 
-[Bugfix]
+[Bug Fix]
 * Case related to Estimated delivery time.
 
 ## Version 3.3.3 – Released: November 17, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to Special service ETD not going with Label request.
 
 ## Version 3.3.2 – Released: November 16, 2017
@@ -1478,7 +1492,7 @@ License migration changes.
 
 ## Version 3.3.1 – Released: November 15, 2017
 
-[Bugfix]
+[Bug Fix]
 * The XA-multi-part-product addon plugin's compatibility with FedEx.
 
 ## Version 3.3.0 – Released: November 15, 2017
@@ -1488,7 +1502,7 @@ License migration changes.
 * Company logo in Commercial Invoice
 * Non-Standard products
 
-[Bugfix]
+[Bug Fix]
 * Case related to freight shipment.
 
 ## Version 3.2.3 – Released: November 10, 2017
@@ -1496,78 +1510,78 @@ License migration changes.
 [New Feature]
 * Option to choose a default service.
 
-[Bugfix]
+[Bug Fix]
 * Corrected CSS on select boxes in the plugin settings page
 
 ## Version 3.1.22 – Released: November 5, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to return label for my account page.
 
 ## Version 3.1.21 – Released: October 31, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case of Return label button not appearing if the rate is disabled.
 
 ## Version 3.1.19 – Released: October 27, 2017
 
-[Bugfix]
+[Bug Fix]
 * Correction if the product is going unpacked.
 
 ## Version 3.1.18 – Released: September 15, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to the Estimated delivery date.
 
-[Improvements]
+[Improvement]
 * Support for Shipping common add-on to bring Residential checkbox on the Checkout page.
 
 ## Version 3.1.17 – Released: September 14, 2017
 
-[Improvements]
+[Improvement]
 * Compatibility with Multiple Shipping address plugin.
 
 ## Version 3.1.16 – Released: September 06, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to Estimated Delivery not showing for some countries.
 
 ## Version 3.1.15 – Released: August 25, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to tracking message.
 
 ## Version 3.1.14 – Released: August 10, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected Conflicts with the Basic Version
 
 ## Version 3.1.13 – Released: August 04, 2017
 
-[Bugfix]
+[Bug Fix]
 * Added Filter for custom tracking message.
 
 ## Version 3.1.12 – Released: August 04, 2017
 
-[Improvements]
+[Improvement]
 * Corrected Compatibility with PHP7 problem.
 
 ## Version 3.1.11 – Released: August 01, 2017
 
-[Improvements]
+[Improvement]
 * Introduced new column in orders page to show pickup requested or not
 
-[Bugfix]
+[Bug Fix]
 * Case related to Pickup not working.
 
 ## Version 3.1.10 – Released: July 30, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected PHP 7.0 compatibility issue.
 
 ## Version 3.1.09 – Released: July 24, 2017
 
-[Improvements]
+[Improvement]
 * Introduced Extreme length surcharge with Freight shipment if the length exceeds 180 inches.
 * Default signature option kept as empty.
 
@@ -1578,35 +1592,35 @@ License migration changes.
 
 ## Version 3.1.06 – Released: July 06, 2017
 
-[Improvements]
+[Improvement]
 * Added option for saving the name for boxes in box packing
 
 ## Version 3.1.05 – Released: July 05, 2017
 
-[Improvements]
+[Improvement]
 * Backward compatibility: Fixed issue of recipient phone number not populating in WC older version.
 
 ## Version 3.1.04 – Released: July 05, 2017
 
-[Improvements]
+[Improvement]
 * Corrected Destination address is not going with an older version of WC.
 
 ## Version 3.1.03 – Released: July 03, 2017
 
-[Improvements]
+[Improvement]
 * Hide ineligible services for extra added packages.
 
 ## Version 3.1.02 – Released: June 29, 2017
 
-[Improvements]
+[Improvement]
 * Option to select Tax type.
 
-[Bugfix]
+[Bug Fix]
 * Corrected Compatibility issue with php7.
 
 ## Version 3.1.01 – Released: June 28, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected issue of weight in the fraction
 
 ## Version 3.1.0 – Released: June 23, 2017
@@ -1626,7 +1640,7 @@ License migration changes.
 
 ## Version 3.0.3 – Released: June 05, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected issue with the third party in Freight shipment.
 
 [New Feature]
@@ -1634,20 +1648,20 @@ License migration changes.
 
 ## Version 3.0.2 – Released: May 30, 2017
 
-[Bugfix]
+[Bug Fix]
 * Removed fraction values from package dimensions.
 
 ## Version 3.0.1 – Released: May 29, 2017
 
-[Improvements]
+[Improvement]
 * Changed default delivery time format.
 
-[Bugfix]
+[Bug Fix]
 * Corrected display of delivery time twice.
 
 ## Version 3.0.0 – Released: May 27, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected issue of CEF (Clearance Entry Fee)
 * FedEx, Ups Conflict in Automatic Label Generation.
 
@@ -1664,7 +1678,7 @@ License migration changes.
 
 ## Version 2.9.7 – Released: May 22, 2017
 
-[Bugfix]
+[Bug Fix]
 * Compatibility issue fix for variable products.
 
 ## Version 2.9.6 – Released: May 18, 2017
@@ -1674,63 +1688,63 @@ License migration changes.
 
 ## Version 2.9.5 – Released: May 17, 2017
 
-[Improvements]
+[Improvement]
 * Compatible With New Addon (Add More Shipping Fields (For Multi-Part Product).
 
 ## Version 2.9.4 – Released: May 16, 2017
 
-[Improvements]
+[Improvement]
 * Updated pre-defined box dimension.
 
 ## Version 2.9.3 – Released: May 15, 2017
 
-[New Features]
+[New Feature]
 * Implemented FedEx CEF(Clearance Entry Fees)
 * Delivery date format updates on cart page
 * Introduced FedEx Specialty boxes
 
 ## Version 2.8.3 – Released: May 5, 2017
 
-[Improvements]
+[Improvement]
 * Updated WSDL
 
 ## Version 2.8.2 – Released: April 25, 2017
 
-[Bugfix]
+[Bug Fix]
 * Corrected issue with services.
 
 ## Version 2.8.1 – Released: April 18, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to issue with Currency ARS.
 
 ## Version 2.8.0 – Released: April 07, 2017
 
-[Improvements]
+[Improvement]
 * Introduced Welcome screen with FedEx Shipping Plugin Setup Tutorial.
 
 ## Version 2.7.4 – Released: April 11, 2017
 
-[Improvements]
+[Improvement]
 * Updated default label size.
 
 ## Version 2.7.3 – Released: March 28, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to no weight provided by the customer.
 
 ## Version 2.7.1 – Released: March 22, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to estimated delivery time.
 
 ## Version 2.7.0 – Released: March 17, 2017
 
-[Improvements]
+[Improvement]
 * WC 2.7 Version compatibility.
 * Estimated delivery message improvements
 
-[Bugfix]
+[Bug Fix]
 * Case related to dimensions with FedEx Boxes in shipment creation.
 
 ## Version 2.6.5 – Released: March 10, 2017
@@ -1738,33 +1752,33 @@ License migration changes.
 [New Feature]
 * Added feature for shipping time offset.
 
-[Improvements]
+[Improvement]
 * Enhancements in duty payer.
 
-[Bugfix]
+[Bug Fix]
 * Case related to Package selection.
 
 ## Version 2.6.4 – Released: March 02, 2017
 
-[Improvements]
+[Improvement]
 * Return label enhancements.
 
 ## Version 2.6.3 – Released: February 27, 2017
 
-[Bugfix]
+[Bug Fix]
 * Weight and dimension display on admin order meta.
 
 ## Version 2.6.2 – Released: February 23, 2017
 
-[Bugfix]
+[Bug Fix]
 * Case related to currency AED
 
 ## Version 2.6.1 – Released: February 20, 2017
 
-[Improvements]
+[Improvement]
 * Label text of Box Maximum Weight changed to Max Package Weight.
 
-[Bugfix]
+[Bug Fix]
 * Case related to Smart Post Hub in the case of Freight.
 
 ## Version 2.6.0 – Released: January 30, 2017
@@ -1774,7 +1788,7 @@ License migration changes.
 
 ## Version 2.5.0 – Released: January 06, 2017
 
-[Bugfix]
+[Bug Fix]
 * Fixed the issue of manual package dimension in the case of multi-vendor/multiple shipping addresses.
 
 ## Version 2.4.9 – Released: January 04, 2017
@@ -1789,17 +1803,17 @@ License migration changes.
 
 ## Version 2.4.6 – Released: December 26, 2016
 
-[Improvements]
+[Improvement]
 * Enhancements
 
 ## Version 2.4.5 – Released: December 20, 2016
 
-[Bugfix]
+[Bug Fix]
 * Fixed compatibility issue with older WC version.
 
 ## Version 2.4.4 – Released: December 10, 2016
 
-[Improvements]
+[Improvement]
 * Updated readme.txt file.
 
 ## Version 2.4.2 – Released: November 27, 2016
@@ -1811,22 +1825,22 @@ License migration changes.
 
 ## Version 2.4.0 – Released: November 15, 2016
 
-[Improvements]
+[Improvement]
 * Stability Improvements in Generate Packages.
 
 ## Version 2.3.9 – Released: November 14, 2016
 
-[Improvements]
+[Improvement]
 * Stability improvement in dry ice shipment.
 
 ## Version 2.3.8 – Released: November 12, 2016
 
-[Bugfix]
+[Bug Fix]
 * Correction in dry ice shipment.
 
 ## Version 2.3.7 – Released: November 08, 2016
 
-[Improvements]
+[Improvement]
 * Multi-vendor stability improvements.
 
 ## Version 2.3.6 – Released: November 01, 2016
@@ -1836,22 +1850,22 @@ License migration changes.
 
 ## Version 2.3.5 – Released: October 29, 2016
 
-[Improvements]
+[Improvement]
 * Splitting of labels.
 
 ## Version 2.3.4 – Released: October 19, 2016
 
-[Bugfix]
+[Bug Fix]
 * Version fixes.
 
 ## Version 2.3.3 – Released: October 18, 2016
 
-[Improvements]
+[Improvement]
 * Added filter for the extra package.
 
 ## Version 2.3.2 – Released: September 28, 2016
 
-[Improvements]
+[Improvement]
 * Implemented manual packaging with weight-based shipping and made it compatible with the multi-vendor scenario.
 
 ## Version 2.3.1 – Released: September 28, 2016
@@ -1861,7 +1875,7 @@ License migration changes.
 
 ## Version 2.3.0 – Released: September 21, 2016
 
-[Improvements]
+[Improvement]
 * Older version compatibility.
 
 ## Version 2.2.9 – Released: September 16, 2016
@@ -1871,12 +1885,12 @@ License migration changes.
 
 ## Version 2.2.8 – Released: September 08, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to NUSOAP
 
 ## Version 2.2.7 – Released: September 02, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to PHP compatibility.
 
 ## Version 2.2.6 – Released: September 02, 2016
@@ -1891,22 +1905,22 @@ License migration changes.
 
 ## Version 2.2.4 – Released: August 23, 2016
 
-[Improvements]
+[Improvement]
 * Address Validation Request enhanced.
 
 ## Version 2.2.3 – Released: August 20, 2016
 
-[Improvements]
+[Improvement]
 * Removed redundant code, improved manual dimensions.
 
 ## Version 2.2.2 – Released: August 18, 2016
 
-[Improvements]
+[Improvement]
 * Manual dimensions correction and improved label printing.
 
 ## Version 2.2.1 – Released: August 17, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to 'Purpose of Shipment'.
 
 ## Version 2.2.0 – Released: August 16, 2016
@@ -1917,36 +1931,36 @@ License migration changes.
 
 ## Version 2.1.9 – Released: August 11, 2016
 
-[Bugfix]
+[Bug Fix]
 * Corrected Pickup time issue.
 
 ## Version 2.1.8 – Released: August 08, 2016
 
-[Improvements]
+[Improvement]
 * Generalized JS file.
 * Case related to API Manager fixed.
 
-[Bugfix]
+[Bug Fix]
 * Case related to delivery estimates printing with the rate.
 
 ## Version 2.1.7 – Released: August 01, 2016
 
-[Bugfix]
+[Bug Fix]
 * API Manager issue fixed.
 
 ## Version 2.1.5 – Released: July 28, 2016
 
-[Improvements]
+[Improvement]
 * Added option to exclude taxes from products while generating shipping labels or commercial invoices.
 
 ## Version 2.1.4 – Released: July 27, 2016
 
-[Improvements]
+[Improvement]
 * Stability Improvements – Handled warning.
 
 ## Version 2.1.3 – Released: July 25, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to notice.
 
 ## Version 2.1.2 – Released: July 25, 2016
@@ -1954,53 +1968,53 @@ License migration changes.
 [New Feature]
 * Pick up options enabled in Settings under Advanced tab
 
-[Bugfix]
+[Bug Fix]
 * The case related to the conflict between the base version and the premium version.
 
 ## Version 2.1.1 – Released: July 12, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to Freight class not linking with shipping class.
 
 ## Version 2.1.0 – Released: July 11, 2016
 
-[Bugfix]
+[Bug Fix]
 * Corrected API manager issue.
 
 ## Version 2.0.9 – Released: July 07, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to PHP compatibility.
 
 ## Version 2.0.8 – Released: July 05, 2016
 
-[Improvements]
+[Improvement]
 * Stability Improvements.
 
 ## Version 2.0.7 – Released: July 04, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to deactivation of license.
 
 ## Version 2.0.6 – Released: July 04, 2016
 
-[Improvements]
+[Improvement]
 * Improvement in license key implementation.
 
 ## Version 2.0.5 – Released: July 04, 2016
 
-[Improvements]
+[Improvement]
 * Improvement in license key implementation.
 
 ## Version 2.0.4 – Released: July 02, 2016
 
-[Improvements]
+[Improvement]
 * Implemented license keys.
 * Automatically update the plugin from WordPress admin.
 
 ## Version 2.0.3 – Released: June 30, 2016
 
-[Improvements]
+[Improvement]
 * Stability Improvements.
 
 ## Version 2.0.2 – Released: June 29, 2016
@@ -2010,22 +2024,22 @@ License migration changes.
 
 ## Version 2.0.1 – Released: June 23, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to address validation (address line 1).
 
 ## Version 2.0.0 – Released: June 20, 2016
 
-[Improvements]
+[Improvement]
 * Changed Singapore currency code to SIG from SGD.
 
 ## Version 1.9.9 – Released: June 16, 2016
 
-[Bugfix]
+[Bug Fix]
 * Version fixes.
 
 ## Version 1.9.8 – Released: June 15, 2016
 
-[Improvements]
+[Improvement]
 * Woocommerce Compatibility update for version 2.6.0.
 
 ## Version 1.9.7 – Released: June 13, 2016
@@ -2035,17 +2049,17 @@ License migration changes.
 
 ## Version 1.9.6 – Released: June 09, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case-related weight in freight.
 
 ## Version 1.9.5 – Released: June 03, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to insurance value.
 
 ## Version 1.9.4 – Released: June 03, 2016
 
-[Improvements]
+[Improvement]
 * Order reference no added to the shipping label.
 
 ## Version 1.9.3 – Released: June 03, 2016
@@ -2065,17 +2079,17 @@ License migration changes.
 
 ## Version 1.9.0 – Released: May 27, 2016
 
-[Improvements]
+[Improvement]
 * Changed description of Commercial invoice field.
 
 ## Version 1.8.9 – Released: May 26, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to COD.
 
 ## Version 1.8.8 – Released: May 24, 2016
 
-[Improvements]
+[Improvement]
 * Reduced the variable-length when the total length of the field exceeds 64 characters.
 
 [New Feature]
@@ -2093,7 +2107,7 @@ License migration changes.
 
 ## Version 1.8.4 – Released: May 04, 2016
 
-[Improvements]
+[Improvement]
 * Settings page content update.
 * Stability-related fixes.
 
@@ -2104,7 +2118,7 @@ License migration changes.
 * Show Delivery Estimate.
 * Method Available to option on settings.
 
-[Improvements]
+[Improvement]
 * Stability-related fixes.
 
 ## Version 1.7.5 – Released: April 02
@@ -2122,23 +2136,23 @@ License migration changes.
 
 ## Version 1.6.3 – Released: March 10, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to print label.
 
 ## Version 1.6.2 – Released: February 29, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to the invoice value.
 
-[Improvements]
+[Improvement]
 * Filter added to modify FedEx request.
 
 ## Version 1.6.0 – Released: February 17, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to COD total.
 
-[Improvements]
+[Improvement]
 * Restricted creating a label for unpacked items using box packing method.
 * Added notice log for address verification request and response.
 
@@ -2152,30 +2166,30 @@ License migration changes.
 [New Feature]
 * B13A filing option with the export document for International Shipment (Other than the US) from Canada.
 
-[Bugfix]
+[Bug Fix]
 * Case related to label printing.
 
 ## Version 1.5.2 – Released: January 21, 2016
 
-[Bugfix]
+[Bug Fix]
 * Case related to Mexican Peso fixed while Showing rates on Cart Page
 
 ## Version 1.5.1 – Released: January 02, 2016
 
-[New Features]
+[New Feature]
 * Introduce support for KG/CM
 * Introduced CHF SFR (Swiz) & Peso Mexicano currency support
 * Minor UX/Content Changes
 
-[Bugfix]
+[Bug Fix]
 * Fixed issue related to a call to get_countries.
 
 ## Version 1.4.5 – Released: December 10, 2015
 
-[Bugfix]
+[Bug Fix]
 * Case related to label printing.
 
-[Improvements]
+[Improvement]
 * WooCommerce FedEx Integration with multiple shipping address plugin.
 
 ## Version 1.4.3 – Released: October 26, 2015
@@ -2190,7 +2204,7 @@ License migration changes.
 
 ## Version 1.4.1 – Released: October 08, 2015
 
-[Bugfix]
+[Bug Fix]
 * For all the PluginHive shipping plugins to work simultaneously
 
 ## Version 1.4.0 – Released: October 08, 2015
@@ -2203,7 +2217,7 @@ License migration changes.
 [New Feature]
 * Automatically add tracking details in order completion email.
 
-[Bugfix]
+[Bug Fix]
 * Used FedEx currency code 'UKL' for the UK.
 
 ## Version 1.2.1 – Released: August 03, 2015
@@ -2213,23 +2227,23 @@ License migration changes.
 
 ## Version 1.1.2 – Released: August 01, 2015
 
-[Improvements]
+[Improvement]
 * As per the suhosin.post.max_name_length guidelines following field names changed to less than 64 lengths. Please re-enter the values for these fields and save the settings after the installation: Billing Street Address 2, Billing ZIP / Postcode, Billing Country Code, Tracking PIN, Rates in base currency.
 
 ## Version 1.1.1 – Released: April 28, 2015
 
-[Improvements]
+[Improvement]
 * As per the guidelines following field names changed to less than 64 lengths. Please re-enter the values for these fields and save the settings after the installation: Shipper Person Name, Shipper Company Name, Shipper Phone Number, Shipper Street 2, Shipper Residential.
 
 ## Version 1.1.0 – Released: April 15, 2015
 
-[New Features]
+[New Feature]
 * Plugin to work globally wherever FedEx service available. Customs information for all countries except US & CANADA and Added 'Purpose' => 'SOLD'
 * Addition provision to enable FedEx Boxes for other countries than the US. FedEx One Rates will be offered if the items are packed into a valid FedEx One box, and the origin and destination are the US. For other countries, this option will enable FedEx packing. Note: All FedEx boxes are not available for all countries, disable this option or disable different boxes if you are not receiving any shipping services.
 * Option to convert the currency to base currency 'FedEx API returns the rates in USD. Please enable Rates in the base currency option in the plugin. Conversion happens only if FedEx API provides the exchange rates.'
 
 ## Version 1.0.0 – Released: April 08, 2015
 
-[New Features]
+[New Feature]
 * Dynamic Shipping Rates
 * Label Printing
