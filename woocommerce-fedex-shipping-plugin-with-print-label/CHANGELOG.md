@@ -1,3 +1,18 @@
+## Version 8.7.2 – Released: September 10th, 2026
+
+[New Feature]
+* Added a “Notify on Connection Lost” setting (under Advanced → Troubleshooting) for stores using a REST-connected FedEx account. It detects when the account’s connection stops authenticating — for example, when a token expires or is revoked — and emails the recipient configured under WooCommerce → Settings → Emails → FedEx Connection Lost, so the account can be reconnected right away instead of only finding out after FedEx services have already stopped working.
+* Added automatic refreshing of the Effective Address on the Edit Order screen whenever the shipping address is changed and order is updated, so rates and services are calculated against the updated effective address rather than the one recorded at order placement.
+* Added a “Show only for FedEx methods” setting under Hold at Location (visible only when Hold at Location is enabled) so the Hold at Location option no longer appears for non-FedEx shipping methods at Classic Checkout.
+
+[Improvement]
+* The diagnostic report sent with a support ticket now includes all FedEx log files, not just the debug log, so support has full context without needing to request additional logs separately.
+
+[Bug Fix]
+* Fixed an issue where stale Effective Address data could remain in the checkout session after the shipping address no longer qualified for validation, which could cause incorrect rates to be shown and, in some cases, the wrong address to be used when generating shipping labels.
+* Fixed a fatal error during shipping rate calculation that could occur when another active plugin recalculated cart totals before the FedEx plugin had fully initialized.
+* Fixed an issue where the plugin’s custom shipping fields on the product edit page could be hidden when WooCommerce Subscriptions was active.
+
 ## Version 8.7.1 – Released: August 6th, 2026
 
 [New Feature]
