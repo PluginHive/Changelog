@@ -6,7 +6,8 @@ Version history for PluginHive's WooCommerce shipping plugins. This repo is the 
 
 | Plugin | Changelog | Product Page |
 |---|---|---|
-| WooCommerce FedEx Shipping Plugin with Print Label | [CHANGELOG.md](woocommerce-fedex-shipping-plugin-with-print-label/CHANGELOG.md) | [View Product](https://www.pluginhive.com/product/woocommerce-fedex-shipping-plugin-with-print-label/?utm_source=github&utm_medium=changelog&utm_campaign=fedex) |
+| FedEx Shipping Plugin for WooCommerce with Print Label | [CHANGELOG.md](woocommerce-fedex-shipping-plugin-with-print-label/CHANGELOG.md) | [View Product](https://www.pluginhive.com/product/woocommerce-fedex-shipping-plugin-with-print-label/?utm_source=github&utm_medium=changelog&utm_campaign=fedex) |
+| UPS Shipping Plugin for WooCommerce with Print Label | [CHANGELOG.md](woocommerce-ups-shipping-plugin-with-print-label/CHANGELOG.md) | [View Product](https://www.pluginhive.com/product/woocommerce-ups-shipping-plugin-with-print-label/?utm_source=github&utm_medium=changelog&utm_campaign=ups) |
 
 More plugins will be added here as they're onboarded.
 
