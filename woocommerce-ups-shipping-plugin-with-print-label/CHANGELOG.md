@@ -1,3 +1,15 @@
+## Version 6.6.4 – Released: September 17th, 2026
+
+[New Feature]
+* Added a new "ph_ups_skip_commercial_invoice" filter that lets store owners skip commercial invoice generation for orders going to regions not part of WooCommerce's countries list, without affecting the shipping label or destination country.
+
+[Improvement]
+* Completed and corrected translations across the plugin for French, German, Italian, and Spanish.
+
+[Bug Fix]
+* Fixed incorrect HazMat quantity sent to UPS when the product's weight unit differed from the account's configured unit of measure.
+* Fixed an issue where the shipping cost stored for an order could include extra decimal places when a Rate Adjustment or currency conversion was applied, causing it to not exactly match what was displayed at checkout.
+
 ## Version 6.6.3 – Released: August 6th, 2026
 
 [New Feature]
