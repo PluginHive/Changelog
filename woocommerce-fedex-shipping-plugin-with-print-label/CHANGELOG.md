@@ -1,3 +1,22 @@
+## Version 8.8.0 – Released: October 7th, 2026
+
+[New Feature]
+* Added support for FedEx Hold at Location on the WooCommerce Block Checkout (previously available on Classic Checkout only). Customers can now search for and select a FedEx pickup location directly from the Block Checkout page, with the shipping rate updating automatically for the selected location.
+* Added a setting to customize the label shown above the Hold at Location field, available on both Classic and Block Checkout (defaults to "FedEx Hold at Location" when left blank).
+* Added a "Leave a Review" reminder that appears on the WordPress Dashboard, Plugins page, and Orders page a few weeks after activation, inviting you to review the plugin on the PluginHive site.
+
+[Improvement]
+* Rate quote transients that never expired, left over from earlier versions with no cache expiry time set, are now removed automatically on update to improve site load time.
+* The Date of Connection on the registration screen now shows in your site's timezone.
+* Corrected missing and broken translations across plugin settings, admin notices, buttons, and order-page metaboxes for all supported languages, and hardened output handling on the My Account return-label page.
+* Improved diagnostic logging for FedEx account registration to help identify and resolve connection issues faster.
+
+[Bug Fix]
+* Fixed label generation failing on WPML stores when an order was placed in a different checkout language and its packages were created automatically.
+* Fixed re-registering a FedEx account showing as successful while the new account details were not saved in the plugin settings.
+* Fixed a display issue where the Box Packing settings buttons could wrap onto a second line.
+* Added a safeguard to prevent a rare fatal error that could occur if a plugin file was temporarily unavailable during a site update.
+
 ## Version 8.7.2 – Released: September 10th, 2026
 
 [New Feature]
