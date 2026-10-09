@@ -1,3 +1,13 @@
+## Version 6.6.5 – Released: October 8th, 2026
+
+[New Feature]
+* Added Hazmat Emergency Contact and Hazmat Emergency Phone Number settings, so you can send your own 24 hour emergency contact details for dangerous goods shipments instead of your store's regular attention name and phone number.
+* Added a "Product SKU x Quantity" option to show each package's products and quantities on the label reference, for example "NGx3,TWLx1".
+
+[Improvement]
+* Address classification and suggestions now work at checkout even when live rates are turned off.
+* For shipments to or from Vietnam, the plugin now works out the province from the postcode, so rate requests and labels no longer fail because of a missing province.
+
 ## Version 6.6.4 – Released: September 17th, 2026
 
 [New Feature]
