@@ -1,3 +1,13 @@
+## Version 8.8.1 – Released: October 27th, 2026
+
+[New Feature]
+* Added a “Hold at Location Details” setting to choose what is shown for each Hold at Location option, such as business name, address, phone number and distance. The same details now appear at checkout, on the order page and in order emails.
+* Added a “Number of Decimals” setting to control how many decimal places are used for the weights and amounts sent to FedEx.
+
+[Bug Fix]
+* Fixed FedEx Freight LTL tracking links opening a page that no longer tracks Freight shipments. They now open the FedEx Freight tracking page.
+* Fixed product variations not following the parent product’s Pre-packed setting, which caused them to be packed together with other items.
+
 ## Version 8.8.0 – Released: October 7th, 2026
 
 [New Feature]
