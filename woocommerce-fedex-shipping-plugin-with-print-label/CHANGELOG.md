@@ -1,3 +1,12 @@
+## Version 8.8.2 – Released: November 19th, 2026
+
+[Improvement]
+* Strengthened security across the plugin’s admin actions by adding request verification and permission checks, so only authorized users can perform them.
+* Enhanced access control for shipping labels, so label files and label creation links are now available only to authorized users. Label links generated before this update will no longer work.
+
+[Bug Fix]
+* Fixed an issue where pickup requests could be booked for the wrong day when the store’s timezone differed from UTC.
+
 ## Version 8.8.1 – Released: October 27th, 2026
 
 [New Feature]
